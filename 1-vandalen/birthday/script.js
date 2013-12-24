@@ -20,19 +20,19 @@ window.onload = function(){
         var birthdateUpcoming;
 
 
-		if (birthdayThisYear.toDateString()  === dateToday.toDateString()) //Om årets födelsedag är idag: Gratulera
+		if (dateToday.toDateString()  === birthdayThisYear.toDateString()) //Om årets födelsedag är idag: Gratulera
 		{
 			return 0;
 		}
-		else if (birthdayThisYear.toDateString() === dateTomorrow.toDateString()) //Om årets födelsedag är imorgon: Informera
+		else if (dateTomorrow.toDateString() === birthdayThisYear.toDateString()) //Om årets födelsedag är imorgon: Informera
 		{
 			return 1;
 		}
-		else if (birthdayThisYear > dateToday) //Om årets födelsedag ligger _framåt_ i tiden: så fyller användaren i år
+		else if (dateToday > birthdayThisYear) //Om årets födelsedag ligger _framåt_ i tiden: så fyller användaren i år
 		{
 			return Math.ceil((birthdayThisYear - dateToday) / dayLength); 
 		}
-		else if (birthdayThisYear < dateToday) //Om årets födelsedag ligger _bakåt_ i tiden: så fyller användaren nästa år
+		else if (dateToday < birthdayThisYear) //Om årets födelsedag ligger _bakåt_ i tiden: så fyller användaren nästa år
 		{
 			return Math.ceil((birthdayNextYear - dateToday) / dayLength); 
 		}
