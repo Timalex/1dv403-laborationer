@@ -3,17 +3,28 @@
 window.onload = function(){
 
 	// I denna funktion ska du skriva koden för att hantera "spelet"
-	var convertString = function(str){
+	var convertString = function (str) {
 		// Plats för förändring.		
 		// Returnera den konverterade strängen.
-		// Vid fel, kasta ett undantag med ett meddelande till användaren. 
-	
+		// Vid fel, kasta ett undantag med ett meddelande till användaren.
+		str = str.split("");
+			for (var index = 0; index < str.length; index++)
+			{	
+				//Om bokstaven är en gemen, spara om den som VERSAL
+				if (str[index] === str[index].toLowerCase()) 
+				{
+					str[index] = str[index].toUpperCase()
+				}
+				else 
+				{ 
+				//Spara annars bokstaven som en gemen
+					str[index] = str[index].toLowerCase()
+				}
+			}
+		str = str.join("");
 
-
-
-
-
-
+		//Ersätt alla A/a med #
+		return str.replace(/a/gi,"#");
 	};
 	// ------------------------------------------------------------------------------
 
