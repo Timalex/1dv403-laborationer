@@ -5,11 +5,11 @@ window.onload = function(){
 	
 	var birthday = function(dateBorn){
 		
-		var dayLength = 24 * 60 * 60 * 1000; // Antalet millisekunder på ett dygn
+	var dayLength = 24 * 60 * 60 * 1000; // Antalet millisekunder på ett dygn
 		
-		var dateToday = new Date();
-        	var dateTomorrow = new Date();
-        	    dateTomorrow.setDate(dateTomorrow.getDate() + 1);
+	var dateToday = new Date();
+        var dateTomorrow = new Date();
+            dateTomorrow.setDate(dateTomorrow.getDate() + 1);
 
         var birthdayThisYear = new Date(dateBorn);
         var birthdayNextYear = new Date(dateBorn);
