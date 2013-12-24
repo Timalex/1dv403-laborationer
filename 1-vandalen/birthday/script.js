@@ -8,8 +8,8 @@ window.onload = function(){
 		var dayLength = 24 * 60 * 60 * 1000; // Antalet millisekunder på ett dygn
 		
 		var dateToday = new Date();
-        var dateTomorrow = new Date();
-        	dateTomorrow.setDate(dateTomorrow.getDate() + 1);
+        	var dateTomorrow = new Date();
+        	    dateTomorrow.setDate(dateTomorrow.getDate() + 1);
 
         var birthdayThisYear = new Date(dateBorn);
         var birthdayNextYear = new Date(dateBorn);
@@ -36,13 +36,7 @@ window.onload = function(){
 		{
 			return Math.ceil((birthdayNextYear - dateToday) / dayLength); 
 		}
-
-
-		// Resterande dagar till nästa födelsedag, inklusive passerad tid idag.
-
-
-
-
+		
 
 	};
 	// ------------------------------------------------------------------------------
